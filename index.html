@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Object Literal Syntax</h1>
+
+   <script>
+
+var personalLiteral = {
+    name: "Hanif",
+    age: 26,
+    nationality:"Pakistan",
+
+introduction : function() {
+        document.write( " Hello, my name is " + personalLiteral.name+ " my age is "+personalLiteral.age+ " and I live in " +personalLiteral.nationality  )
+    },
+
+};
+
+
+personalLiteral.introduction();
+
+
+   </script>
+
+   <h1>Factory Function Syntax</h1>
+
+   <script>
+
+var createPersonFactory={
+    
+
+    
+    introduction : function (name , age , nationality) {
+          document.write( " Hello, my name is " + name+ " my age is "+age+ " and I live in " +nationality  );
+           return createPersonFactory;
+      },
+  
+      
+  };
+  
+  createPersonFactory.introduction( "Hanif", 26 , "Pakistan")
+
+   </script>
+
+<h1>Constructor Function Syntax</h1>
+
+<h3>Please check in console</h3>
+
+<script>
+function PersonConstructor (name,age,nationality){
+    
+    this.name = name;
+    this.age = age;
+    this.nationality = nationality;
+    
+};
+
+var intro = new PersonConstructor("hanif",26 , "Pakistan");
+
+console.log(intro);
+
+</script>
+
+
+<h1>Mixed Data Object </h1>
+<script>
+
+var mixedDataObject = {
+    name : "Hanif",
+    age : 26,
+    ismarried: false,
+   
+    skills:["html" , "css" , "javascript" , "react"],
+    
+    
+    
+};
+
+document.write(mixedDataObject.name);
+document.write("<br>");
+document.write(mixedDataObject.age);
+document.write("<br>");
+document.write(mixedDataObject.ismarried);
+document.write("<br>");
+document.write(mixedDataObject.skills[2]);
+
+</script>
+
+<h1>Simple Data Object</h1>
+
+<script>
+    var simpleDataObject ={
+    name: "Hanif",
+    age : 26,
+    student : false,
+};
+
+document.write(simpleDataObject.name );
+document.write("<br>");
+document.write(simpleDataObject.age );
+document.write("<br>");
+document.write(simpleDataObject.student);
+
+
+</script>
+
+
+<h1>Nested Object</h1>
+
+<script>
+
+var nestedObject = {
+    
+    
+    person:{
+        name: "Hanif",
+        adress: "Hyderabad",
+        intrest:["Watching Movies" , "Traveling", "Coding"],
+    },
+};
+
+
+document.write(nestedObject.person.name);
+document.write("<br>");
+document.write(nestedObject.person.adress);
+document.write("<br>");
+document.write(nestedObject.person.intrest[0]);
+document.write("<br>");
+document.write(nestedObject.person.intrest[1]);
+document.write("<br>");
+document.write(nestedObject.person.intrest[2]);
+</script>
+
+
+<h1> function Object </h1>
+
+<!--  Create an object named functionObject with properties that are functions (add, multiply, and greet). Use these functions to perform basic arithmetic operations and generate a personalized greeting. -->
+
+<script>
+var functionObject ={
+    
+    
+    add: function(a,b){
+      return a+b;
+    },
+    
+    multiplication: function(a,b){
+      return a * b;
+    },
+    
+    
+    greeting : function(name){
+    document.write("Hello Mr " + name + "  How are you today?");
+    },
+    
+};
+
+var addResult = functionObject.add(2,5);
+document.write(addResult);
+
+document.write("<br>");
+
+var multiplicationResult = functionObject.multiplication(2,5)
+document.write(multiplicationResult);
+
+document.write("<br>");
+
+functionObject.greeting("Hanif");
+
+</script>
+</body>
+</html>
